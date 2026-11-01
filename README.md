@@ -31,7 +31,7 @@ skill-discovery：让 Agent 能从云端搜索和下载社区技能。
 4、生成原始skill
 写入位置：对于 CAPTURED 生成的全新技能，OpenSpace 会将其直接写入你配置的宿主 Agent 的技能目录
 
-##二、skill功能评估
+## 二、skill功能评估
 1、工具安装
 选择agent-insight作为skill评估平台。
 一键安装：
