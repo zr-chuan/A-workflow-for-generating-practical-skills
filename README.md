@@ -1,5 +1,5 @@
 # A-workflow-for-generating-practical-skills
-分享一个较为完整的从零生成并优化至可实际应用的skills的流程
+分享一个基于AutoSecill项目的，实现较为完整的从零生成并优化至可实际应用的skills流程
 ## 目标是实现Agent工作生成skill的一个闭环：从执行轨迹中提炼“技能”（Skill），存入技能库，并在新任务中检索、应用、验证和迭代。
 ## 一、从零生成skill
 对于任意类型的一个Agent,可以部署一个根据其工作流生成基础skill的agent，这里我们选择OpenSpace来完成这个功能。
@@ -47,6 +47,7 @@ agent-skill支持OpenCode等多种模型。
 <img width="2664" height="1280" alt="9a3c917c4b63900901368c7eebb369b6" src="https://github.com/user-attachments/assets/3dddf6fe-f33c-4552-8f6a-a8ce6f6ed598" />
 选择 OpenCode，复制它生成的那条 curl 命令，而后在运行 OpenCode 的终端里，粘贴并执行刚才复制的命令。它会引导你完成插件安装和 API Key 配置。
 对于功能的配置，根据需求选择即可。
+
 3、导入skill
 
 在skill管理中心处可导入本地skill，同时可以监测管理agent的运行情况。
@@ -59,5 +60,21 @@ agent-skill支持OpenCode等多种模型。
 
 agent-insight同时兼有完善进化skill的功能。对于导入的skill，可以直接发现问题并ai智能进化。优化后会生成一个候选版本，在一个新网页上显示Diff，而后选择保留或重新优化即可。
 
-至此就完成了一个从skill的生成到优化落地流程的雏形，适用于多种agent，几乎没有适配性的限制。
+
+## 常见问题
+opencode server did not become ready within 30s报错：
+<img width="664" height="738" alt="图片" src="https://github.com/user-attachments/assets/bcbf37c4-d120-4806-8d21-e6295c530eb2" />
+若无法通过常规方式解决，可直接跳过看板，在OpenCode终端优化：
+```bash
+opencode run "/si-optimizer 目标文件路径"
+```
+可实现相同效果
+
+## 总结
+至此就完成了一个从skill的生成到优化落地流程的雏形，适用于多种agent，且几乎没有适配性的限制。
+
+[agent-insight详情](https://gitcode.com/openeuler/agent-insight)
+
+
+## 免责声明
 该方法仅作为个人学习交流使用。
