@@ -64,6 +64,7 @@ agent-insight同时兼有完善进化skill的功能。对于导入的skill，可
 ## 常见问题
 opencode server did not become ready within 30s报错：
 <img width="664" height="738" alt="图片" src="https://github.com/user-attachments/assets/bcbf37c4-d120-4806-8d21-e6295c530eb2" />
+
 若无法通过常规方式解决，可直接跳过看板，在OpenCode终端优化：
 ```bash
 opencode run "/si-optimizer 目标文件路径"
